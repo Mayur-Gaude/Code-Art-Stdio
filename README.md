@@ -4,8 +4,6 @@
 
 Code Art Studio is a web-based drawing application that translates your creations into clean HTML, CSS, and SVG code in real-time. It's a visual playground for designers, developers, and learners who want to bridge the gap between art and code.
 
-![Screenshot of Code Art Studio in action](path/to/your/screenshot.png)
-
 ---
 
 ## ✨ Features
