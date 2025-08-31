@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code Art Studio 🎨</title>
+  <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+  <div class="app-container">
+    <!-- Toolbar -->
+    <header class="toolbar">
+      <div class="toolbar-header">
+        <h1>🎨 Code Art Studio</h1>
+        <div class="view-toggle">
+          <button id="canvasViewBtn" class="active">🎨 Canvas</button>
+          <button id="codeViewBtn">💻 Code</button>
+          <button id="splitViewBtn">⚡ Split</button>
+        </div>
+      </div>
+      
+      <div class="tools">
+        <div class="tool-group">
+          <label>Drawing:</label>
+          <div class="tool-btn-group">
+            <button id="pencilTool" class="tool-btn active">✏️</button>
+            <button id="brushTool" class="tool-btn">🖌️</button>
+            <button id="eraserTool" class="tool-btn">🧽</button>
+            <button id="bucket" class="tool-btn">🪣</button>
+          </div>
+        </div>
+        
+        <div class="tool-group">
+          <label>Shapes:</label>
+          <div class="tool-btn-group">
+            <button id="lineTool" class="tool-btn">📏</button>
+            <button id="rectangleTool" class="tool-btn">⬜</button>
+            <button id="circleTool" class="tool-btn">⭕</button>
+            <button id="triangleTool" class="tool-btn">🔺</button>
+            <button id="starTool" class="tool-btn">⭐</button>
+            <button id="ellipseTool" class="tool-btn">🥚</button>
+          </div>
+        </div>
+        
+        <div class="tool-group">
+          <label>Colors:</label>
+          <div class="color-palette">
+            <div class="color-swatch active" data-color="#000000" style="background-color: #000000;"></div>
+            <div class="color-swatch" data-color="#FFFFFF" style="background-color: #FFFFFF;"></div>
+            <div class="color-swatch" data-color="#FF0000" style="background-color: #FF0000;"></div>
+            <div class="color-swatch" data-color="#00FF00" style="background-color: #00FF00;"></div>
+            <div class="color-swatch" data-color="#0000FF" style="background-color: #0000FF;"></div>
+            <div class="color-swatch" data-color="#FFFF00" style="background-color: #FFFF00;"></div>
+            <div class="color-swatch" data-color="#FF00FF" style="background-color: #FF00FF;"></div>
+            <div class="color-swatch" data-color="#00FFFF" style="background-color: #00FFFF;"></div>
+            <div class="color-swatch" data-color="#FFA500" style="background-color: #FFA500;"></div>
+            <div class="color-swatch" data-color="#800080" style="background-color: #800080;"></div>
+            <input type="color" id="customColorPicker" class="custom-color-picker" value="#000000" title="Custom Color" />
+          </div>
+        </div>
+        
+        <div class="tool-group">
+          <label>Size:</label>
+          <input type="range" id="sizeSlider" min="1" max="50" value="2" />
+          <span id="sizeDisplay">2px</span>
+        </div>
+        
+        <div class="tool-group">
+          <button id="undoBtn" class="action-btn">↶ Undo</button>
+          <button id="redoBtn" class="action-btn">↷ Redo</button>
+          <button id="clearBtn" class="action-btn">🗑️ Clear</button>
+          <button id="saveBtn" class="action-btn">💾 Save</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+      <div class="canvas-container">
+        <canvas id="artCanvas" width="800" height="600"></canvas>
+      </div>
+
+      <!-- Code Panel -->
+      <div class="code-panel" id="codePanel">
+        <div class="code-header">
+          <h3>📋 Generated Code</h3>
+          <div class="code-tabs">
+            <button class="code-tab active" data-tab="css">CSS</button>
+            <button class="code-tab" data-tab="svg">SVG</button>
+            <button class="code-tab" data-tab="html">HTML</button>
+          </div>
+        </div>
+        <div class="code-content">
+          <button class="copy-btn" id="copyBtn">📋 Copy</button>
+          <textarea class="code-editor" id="codeEditor" readonly placeholder="Draw something to see the generated code..."></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
