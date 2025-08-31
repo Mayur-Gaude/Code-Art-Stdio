@@ -1,6 +1,6 @@
 # 🎨 Code Art Studio
 
-**Live Demo:** [Link to your GitHub Pages or Netlify site]
+**Live Demo:** [https://mayur-gaude.github.io/Code-Art-Stdio/]
 
 Code Art Studio is a web-based drawing application that translates your creations into clean HTML, CSS, and SVG code in real-time. It's a visual playground for designers, developers, and learners who want to bridge the gap between art and code.
 
